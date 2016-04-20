@@ -9,6 +9,7 @@ void loop()
 }
 void calliberate(int triggerpin)
 {
+Serial1.write(0xC0);
 pinMode(triggerpin,OUTPUT);  
 digitalWrite(triggerpin,HIGH);
 delay(200);
@@ -16,4 +17,5 @@ digitalWrite(triggerpin,LOW);
 delay(200);
 digitalWrite(triggerpin,HIGH);
 delay(200);
+Serial1.write(0xC1);
 }
